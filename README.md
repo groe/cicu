@@ -22,24 +22,24 @@ Or install it yourself as:
 
 Create a ruleset
 
-    ```ruby
-    ruleset = Cicu::Ruleset.new("[normalization on] & b < a < c")
-    ```
+```ruby
+ruleset = Cicu::Ruleset.new("[normalization on] & b < a < c")
+```
 
 Sort an array
 
-    ```ruby
-    ary = %w( a b c ba bb bc )
-    sorted_ary = ruleset.sort_by { |el| ruleset.sort_key(el) }
-    # => "["b", "bb", "ba", "bc", "a", "c"]"
-    ```
+```ruby
+ary = %w( a b c ba bb bc )
+sorted_ary = ruleset.sort_by { |el| ruleset.sort_key(el) }
+# => "["b", "bb", "ba", "bc", "a", "c"]"
+```
 
 Get the sort key for a string
 
-    ```ruby
-    ruleset.sort_key("abc")
-    # => "*\x04)*\x05\x01\a\x01\a"
-    ```
+```ruby
+ruleset.sort_key("abc")
+# => "*\x04)*\x05\x01\a\x01\a"
+```
 
 You can store sort keys in a database column to use them in `ORDER BY` queries. Make sure to use a column type that supports binary strings (e.g. MySQLs VARBINARY).
 
