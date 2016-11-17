@@ -41,7 +41,7 @@ ruleset.sort_key("abc")
 # => "*\x04)*\x05\x01\a\x01\a"
 ```
 
-You can store sort keys in a database column to use them in `ORDER BY` queries. Make sure to use a column type that supports binary strings (e.g. MySQLs VARBINARY).
+You can store sort keys in a database column to use them in `ORDER BY` queries. Make sure to use a column type that supports binary strings (e.g. MySQLs [VARBINARY](http://dev.mysql.com/doc/refman/5.7/en/binary-varbinary.html)).
 
 ## Contributing
 
