@@ -46,7 +46,7 @@ static VALUE ruleset_initialize(VALUE self, VALUE rules) {
     DATA_PTR(self) = collator;
   }
   else {
-    rb_raise(rb_eArgError, "Failed to initialize ICU ruleset");
+    rb_raise(rb_eArgError, u_errorName(status));
   }
 
   return self;
