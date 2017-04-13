@@ -17,7 +17,7 @@ describe Cicu::Ruleset do
       expect(ruleset.sort_key("123")).to eq("\x14\x16\x18\x01\a\x01\a")
     end
     it "should create a ruleset" do
-      ruleset = Cicu::Ruleset.new("[normalization on] & a")
+      ruleset = Cicu::Ruleset.new("[normalization on] &")
       expect(ruleset.sort_key("123")).to eq("\x14\x16\x18\x01\a\x01\a")
     end
   end
