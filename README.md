@@ -6,6 +6,10 @@ Custom ICU rulesets for collation in ruby - requires libicu
 
 ## Installation
 
+Make sure libicu is installed:
+
+    $ sudo apt-get install libicu-dev
+
 Add this line to your application's Gemfile:
 
     gem 'cicu'
